@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DolabimWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="KullaniciBilgiK">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="İsim" Type="varchar" MaxLength="50" />
+          <Property Name="Soyisim" Type="varchar" MaxLength="50" />
+          <Property Name="TelefonNo" Type="varchar" MaxLength="50" />
+          <Property Name="Adres" Type="varchar" MaxLength="200" />
+          <Property Name="Cinsiyet" Type="varchar" MaxLength="50" />
+          <Property Name="Sifre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SirketBilgiK">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="İsim" Type="varchar" MaxLength="50" />
+          <Property Name="Soyisim" Type="varchar" MaxLength="50" />
+          <Property Name="TelefonNo" Type="varchar" MaxLength="50" />
+          <Property Name="Adres" Type="varchar" MaxLength="200" />
+          <Property Name="SirketAd" Type="varchar" MaxLength="50" />
+          <Property Name="VergiNo" Type="varchar" MaxLength="50" />
+          <Property Name="Sifre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_Urun">
+          <Key>
+            <PropertyRef Name="Urun_Id" />
+          </Key>
+          <Property Name="Urun_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UrunKategori" Type="varchar" MaxLength="50" />
+          <Property Name="UrunBeden" Type="varchar" MaxLength="50" />
+          <Property Name="UrunAdet" Type="varchar" MaxLength="50" />
+          <Property Name="UrunMarka" Type="varchar" MaxLength="50" />
+          <Property Name="UrunModel" Type="varchar" MaxLength="50" />
+          <Property Name="UrunFiyat" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="DolabimWebModelStoreContainer">
+          <EntitySet Name="KullaniciBilgiK" EntityType="Self.KullaniciBilgiK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SirketBilgiK" EntityType="Self.SirketBilgiK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Urun" EntityType="Self.Tbl_Urun" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DolabimWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="KullaniciBilgiK">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="İsim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Soyisim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TelefonNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Adres" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Cinsiyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SirketBilgiK">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="İsim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Soyisim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TelefonNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Adres" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SirketAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VergiNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Urun">
+          <Key>
+            <PropertyRef Name="Urun_Id" />
+          </Key>
+          <Property Name="Urun_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UrunKategori" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UrunBeden" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UrunAdet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UrunMarka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UrunModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UrunFiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DolabimWebEntity" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="KullaniciBilgiK" EntityType="Self.KullaniciBilgiK" />
+          <EntitySet Name="SirketBilgiK" EntityType="Self.SirketBilgiK" />
+          <EntitySet Name="Tbl_Urun" EntityType="Self.Tbl_Urun" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DolabimWebModelStoreContainer" CdmEntityContainer="DolabimWebEntity">
+          <EntitySetMapping Name="KullaniciBilgiK">
+            <EntityTypeMapping TypeName="DolabimWebModel.KullaniciBilgiK">
+              <MappingFragment StoreEntitySet="KullaniciBilgiK">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="İsim" ColumnName="İsim" />
+                <ScalarProperty Name="Soyisim" ColumnName="Soyisim" />
+                <ScalarProperty Name="TelefonNo" ColumnName="TelefonNo" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SirketBilgiK">
+            <EntityTypeMapping TypeName="DolabimWebModel.SirketBilgiK">
+              <MappingFragment StoreEntitySet="SirketBilgiK">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="İsim" ColumnName="İsim" />
+                <ScalarProperty Name="Soyisim" ColumnName="Soyisim" />
+                <ScalarProperty Name="TelefonNo" ColumnName="TelefonNo" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="SirketAd" ColumnName="SirketAd" />
+                <ScalarProperty Name="VergiNo" ColumnName="VergiNo" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Urun">
+            <EntityTypeMapping TypeName="DolabimWebModel.Tbl_Urun">
+              <MappingFragment StoreEntitySet="Tbl_Urun">
+                <ScalarProperty Name="Urun_Id" ColumnName="Urun_Id" />
+                <ScalarProperty Name="UrunKategori" ColumnName="UrunKategori" />
+                <ScalarProperty Name="UrunBeden" ColumnName="UrunBeden" />
+                <ScalarProperty Name="UrunAdet" ColumnName="UrunAdet" />
+                <ScalarProperty Name="UrunMarka" ColumnName="UrunMarka" />
+                <ScalarProperty Name="UrunModel" ColumnName="UrunModel" />
+                <ScalarProperty Name="UrunFiyat" ColumnName="UrunFiyat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
